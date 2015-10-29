@@ -1,0 +1,25 @@
+{
+  "name": "react-unit-test-talk",
+  "version": "1.0.0",
+  "description": "Companion project for the React unit test talk",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --opts mocha.opts",
+    "test:watch": "mocha --opts mocha.opts --watch --reporter min"
+  },
+  "repository": "algolia/react-unit-test-talk",
+  "author": "Algolia <support@algolia.com> (https://github.com/algolia/)",
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "expect": "^1.12.2",
+    "expect-jsx": "^2.0.1",
+    "jsdom": "^7.0.2",
+    "mocha": "^2.3.3",
+    "mocha-jsdom": "^1.0.0",
+    "react": "^0.14.1",
+    "react-addons-test-utils": "^0.14.1",
+    "react-dom": "^0.14.1"
+  }
+}
