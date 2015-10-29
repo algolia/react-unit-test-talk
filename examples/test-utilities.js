@@ -1,6 +1,8 @@
 import React from 'react';
-import {findDOMNode} from 'react-dom';
-import {renderIntoDocument} from 'react-addons-test-utils';
+import {
+  renderIntoDocument,
+  findRenderedDOMComponentWithTag
+} from 'react-addons-test-utils';
 import jsdom from 'mocha-jsdom';
 import expect from 'expect';
 
@@ -16,14 +18,13 @@ class Button extends React.Component {
   }
 }
 
-describe('Real dom test', () => {
+describe('Real Test Utilities', () => {
   jsdom({useEach: true});
 
   it('works', () => {
     let component = renderIntoDocument(<Button name="John" />);
-    let DOMNode = findDOMNode(component);
     expect(
-      DOMNode.querySelector('span')
+      findRenderedDOMComponentWithTag(component, 'span')
         .textContent
     ).toEqual('Hello John');
   });
